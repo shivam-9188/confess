@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="cover">
+
+<div class="envelope">
+
+<h2>Hey listen… 👀</h2>
+<p>I need to say something to you</p>
+
+<a href="letter.html">
+
+<audio id="music1" loop>
+  <source src="music1.mp3" type="audio/mpeg">
+</audio>
+
+<button id="openBtn">Open</button>
+
+<script>
+const btn = document.getElementById("openBtn");
+const music = document.getElementById("music1");
+
+btn.addEventListener("click", function(){
+
+  music.play().catch(()=>{});
+
+  setTimeout(function(){
+    window.location.href="letter.html";
+  },500);
+
+});
+</script>
+
+</a>
+
+</div>
+
+</body>
+</html>

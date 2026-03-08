@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>My Letter ❤️</title>
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="letterPage">
+
+<audio id="music1" loop>
+<source src="music1.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Corner GIFs -->
+
+<img class="bear bear1" src="https://c.tenor.com/YSk904TkxhkAAAAC/tenor.gif">
+<img class="bear bear2" src="https://c.tenor.com/QuPZOpCPy3YAAAAC/tenor.gif">
+<img class="bear bear3" src="https://media.tenor.com/2KrmhQzy6mIAAAAi/cute-bear-silvia-emoji.gif">
+
+
+<div class="scroll">
+
+<h1>My Letter To You</h1>
+
+<p id="text"></p>
+
+<div class="buttons">
+
+<button onclick="location.href='yes.html'">YES ❤️</button>
+<button id="noBtn">NO 😅</button>
+
+</div>
+
+<button id="playMusic" class="musicBtn">
+Tap here to listen a beautiful song just for you my MADAM🎶
+</button>
+
+<audio id="music1" loop>
+<source src="music1.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+
+/* start music after first tap */
+
+const music = document.getElementById("music1");
+
+document.addEventListener("click", function(){
+music.play().catch(()=>{});
+},{once:true});
+
+
+let message = `You know… I really really like you.  
+
+From the day we met and started texting,  
+something felt different for me.
+
+Every time my phone rings,  
+for a second I hope it's you.
+
+Whenever I’m free, I end up thinking about you.
+
+Sometimes I smile alone remembering our chats.
+
+There’s a strange spark in my heart  
+and a smile on my face whenever I text you.
+
+Sometimes I even get jealous seeing other guys in your followers.
+
+I stalk your profile just to see what’s going on in your life.
+
+And when I see a reel that reminds me of you  
+I want to send it to you…  
+
+but I end up saving it in a folder  
+hoping maybe someday it will come to use.
+
+I know you might not know me that well yet…  
+
+but somehow I feel connected to your soul.
+
+So today I just want to ask you something…
+
+Will you be mine? ❤️`;
+
+let i = 0;
+
+function typeWriter(){
+
+if(i < message.length){
+
+document.getElementById("text").innerHTML += message.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,40);
+
+}
+
+}
+
+setTimeout(typeWriter,1000);
+
+
+/* NO button moves only when hovered */
+
+let noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover",function(){
+
+let x=Math.random()*400;
+let y=Math.random()*300;
+
+noBtn.style.position="absolute";
+noBtn.style.left=x+"px";
+noBtn.style.top=y+"px";
+
+});
+
+</script>
+
+<script>
+const music = document.getElementById("music1");
+
+document.addEventListener("click", function(){
+music.play();
+},{once:true});
+</script>
+
+<script>
+const music = document.getElementById("music1");
+const btn = document.getElementById("playMusic");
+
+btn.onclick = function(){
+  music.play();
+  btn.style.display = "none";
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>She Said Yes ❤️</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="yesPage">
+
+<audio id="music2" loop>
+<source src="music2.mp3" type="audio/mpeg">
+</audio>
+
+<video autoplay muted loop class="bg">
+<source src="video.mp4" type="video/mp4">
+</video>
+
+<button id="playMusic2" class="musicBtn">
+Tap to play our song ❤️
+</button>
+
+<audio id="music2" loop>
+<source src="music2.mp3" type="audio/mpeg">
+</audio>
+
+<div class="message">
+
+THANK YOU MADAM JI ❤️
+
+<br><br>
+
+Mai ab se apka
+
+<br>
+
+<strong>JORU KA GULAM 😌❤️</strong>
+
+</div>
+
+<script>
+const music2 = document.getElementById("music2");
+
+document.addEventListener("click", function(){
+  music2.play();
+},{once:true});
+</script>
+
+<script>
+const music2 = document.getElementById("music2");
+const btn2 = document.getElementById("playMusic2");
+
+btn2.onclick = function(){
+  music2.play();
+  btn2.style.display = "none";
+};
+</script>
+
+</body>
+</html>
